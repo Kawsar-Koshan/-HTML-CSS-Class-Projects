@@ -1,1 +1,125 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: 'Trebuchet MS', Verdana, sans-serif;
+      color: #3b2417;
+      background-color: #f5e6d3;
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+      min-height: 100vh;
+    }
+
+    .header {
+      grid-area: header;
+      background-color: #432926;
+      color: #fdf6ec;
+      text-align: center;
+      padding: 30px;
+      
+    }
+
+    .header h1 {
+      font-family:Georgia, 'Times New Roman', Times, serif ;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      margin-top: 5px;
+      color: #dcbe97;
+    }
+
+    .nav {
+      grid-area: nav;
+      background-color: #96623d;
+      padding: 15px;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .nav a {
+      color: #fdf6ec;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 4px;
+    }
+
+    .nav a:hover {
+      background-color: #d28e5a;
+    }
+
+    .main-content {
+      grid-area: main;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .main-content h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      color: #4b2e2b;
+      font-size: 36px;
+      margin-bottom: 25px;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .flex-item {
+        background-color: white;
+        border: 2px solid #c08552;
+        padding: 20px;
+        width: 160px;
+        border-radius: 8px;
+        font-weight: bold;
+        
+    }
+
+    .flex-item:hover {
+      
+      background-color: #f0e4d0;
+    }
+
+    .footer {
+      grid-area: footer;
+      background-color: #432926;
+      color: #fdf6ec;
+      text-align: center;
+      padding: 15px;  
+    }
+
+    @media (max-width: 600px) {
+    .nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .flex-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+
+            .flex-item {
+                width: 80%;
+            }
+    }
